@@ -44,11 +44,11 @@ const CalendarPage = () => {
     const renderHeader = () => {
         return (
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-                <Button variant="secondary" onClick={prevMonth} style={{ padding: '8px 16px' }}><FaChevronLeft /></Button>
+                <Button variant="secondary" onClick={prevMonth} style={{ padding: '8px 16px' }} aria-label="Bulan Terdahulu"><FaChevronLeft /></Button>
                 <h2 className="text-title-large" style={{ fontSize: '1.2rem', textTransform: 'capitalize' }}>
                     {format(currentMonth, 'MMMM yyyy', { locale: ms })}
                 </h2>
-                <Button variant="secondary" onClick={nextMonth} style={{ padding: '8px 16px' }}><FaChevronRight /></Button>
+                <Button variant="secondary" onClick={nextMonth} style={{ padding: '8px 16px' }} aria-label="Bulan Seterusnya"><FaChevronRight /></Button>
             </div>
         );
     };

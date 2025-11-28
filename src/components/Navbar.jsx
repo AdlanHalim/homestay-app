@@ -15,9 +15,9 @@ const Navbar = () => {
                 <HashLink smooth to="/#utama" className="navbar-logo" onClick={() => setIsOpen(false)}>
                     Homestay<span className="logo-accent">Nature</span>
                 </HashLink>
-                <div className="menu-icon" onClick={toggleMenu}>
+                <button className="menu-icon" onClick={toggleMenu} aria-label="Toggle Menu" style={{ background: 'none', border: 'none', padding: 0 }}>
                     {isOpen ? <FaTimes /> : <FaBars />}
-                </div>
+                </button>
                 <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
                         <HashLink smooth to="/#utama" className="nav-links" onClick={toggleMenu}>

@@ -1,14 +1,14 @@
 :root {
-  /* User Requested Pastel Palette */
-  --md-sys-color-primary: #5A8F99;
-  /* Darker version of #93BFC7 for text/contrast */
+  /* User Requested Pastel Palette (Adjusted for Contrast) */
+  --md-sys-color-primary: #3A6B74;
+  /* Darkened from #5A8F99 for 4.5:1 contrast */
   --md-sys-color-on-primary: #FFFFFF;
   --md-sys-color-primary-container: #93BFC7;
   /* The Blue requested */
   --md-sys-color-on-primary-container: #001F25;
 
-  --md-sys-color-secondary: #5E8C61;
-  /* Darker version of #ABE7B2 */
+  --md-sys-color-secondary: #3E6641;
+  /* Darkened from #5E8C61 for 4.5:1 contrast */
   --md-sys-color-on-secondary: #FFFFFF;
   --md-sys-color-secondary-container: #ABE7B2;
   /* The Green requested */
