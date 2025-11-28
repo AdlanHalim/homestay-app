@@ -11,8 +11,8 @@ const Location = () => {
     return (
         <div className="container" style={{ paddingBottom: '32px', paddingTop: '20px' }}>
 
-            {/* Map Section - Snap Point */}
-            <section id="lokasi-peta" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            {/* Map Section */}
+            <section id="lokasi-peta">
                 <h1 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Lokasi</h1>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -43,8 +43,10 @@ const Location = () => {
                 </div>
             </section>
 
-            {/* Attractions Section - Snap Point */}
-            <section id="tarikan" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div className="section-separator"></div>
+
+            {/* Attractions Section */}
+            <section id="tarikan">
                 <h2 className="text-headline-medium" style={{ marginBottom: '32px', textAlign: 'center' }}>Tarikan Berdekatan</h2>
                 <div className="grid-responsive">
                     <Card variant="variant">

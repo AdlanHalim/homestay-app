@@ -30,8 +30,8 @@ const PropertyDetails = () => {
     return (
         <div className="container" style={{ paddingBottom: '32px', paddingTop: '20px' }}>
 
-            {/* Gallery Section - Snap Point */}
-            <section id="galeri" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            {/* Gallery Section */}
+            <section id="galeri">
                 <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Galeri</h2>
                 <Link to="/gallery" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', cursor: 'pointer' }}>
@@ -54,8 +54,10 @@ const PropertyDetails = () => {
                 </Link>
             </section>
 
-            {/* Amenities Section - Snap Point */}
-            <section id="kemudahan" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div className="section-separator"></div>
+
+            {/* Amenities Section */}
+            <section id="kemudahan">
                 <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Kemudahan</h2>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '16px' }}>
                     {amenities.map((item, index) => (

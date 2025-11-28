@@ -10,11 +10,11 @@ const Home = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingBottom: '32px' }}>
             {/* Hero Section */}
-            <div id="utama" className="snap-section" style={{
+            <div id="utama" style={{
                 backgroundImage: 'url("https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                minHeight: '100vh', /* Full height for snap effect */
+                minHeight: '80vh', /* Slightly reduced height */
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -27,7 +27,7 @@ const Home = () => {
                 <div style={{
                     position: 'absolute',
                     top: 0, left: 0, right: 0, bottom: 0,
-                    backgroundColor: 'rgba(0,0,0,0.5)'
+                    backgroundColor: 'rgba(0,0,0,0.4)' /* Lighter overlay */
                 }}></div>
                 <div style={{ position: 'relative', zIndex: 1, maxWidth: '600px' }}>
                     <h1 className="text-display-small" style={{ marginBottom: '16px', color: 'white' }}>Selamat Datang ke Homestay Nature</h1>
@@ -38,37 +38,24 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Highlights Section */}
-            <div className="container snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '24px' }}>Kenapa Pilih Kami?</h2>
-                <div className="grid-responsive">
-                    <Card>
-                        <h3 className="text-title-large" style={{ marginBottom: '8px' }}>Suasana Selesa</h3>
-                        <p className="text-body-large">Direka untuk membuat anda berasa seperti di rumah dengan hiasan dalaman yang hangat dan perabot yang selesa.</p>
-                    </Card>
-                    <Card>
-                        <h3 className="text-title-large" style={{ marginBottom: '8px' }}>Pemandangan Indah</h3>
-                        <p className="text-body-large">Bangun dengan pemandangan gunung yang menakjubkan dan kehijauan yang subur terus dari tingkap anda.</p>
-                    </Card>
-                    <Card>
-                        <h3 className="text-title-large" style={{ marginBottom: '8px' }}>Kemudahan Moden</h3>
-                        <p className="text-body-large">Nikmati Wi-Fi percuma, dapur yang lengkap, dan sistem hiburan pintar.</p>
-                    </Card>
-                </div>
-            </div>
+            <div className="section-separator"></div>
 
-            {/* Property Details Section */}
+            {/* Property Details Section (Galeri & Kemudahan) */}
             <div id="info">
                 <PropertyDetails />
             </div>
 
-            {/* Location Section */}
+            <div className="section-separator"></div>
+
+            {/* Location Section (Lokasi & Tarikan) */}
             <div id="lokasi">
                 <Location />
             </div>
 
+            <div className="section-separator"></div>
+
             {/* Calendar Section */}
-            <div id="kekosongan" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div id="kekosongan">
                 <CalendarPage />
             </div>
         </div>

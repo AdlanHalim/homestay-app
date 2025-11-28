@@ -1,37 +1,41 @@
 :root {
-  /* Cheerful Nature Palette */
-  --md-sys-color-primary: #43A047;
-  /* Vibrant Green */
+  /* User Requested Pastel Palette */
+  --md-sys-color-primary: #5A8F99;
+  /* Darker version of #93BFC7 for text/contrast */
   --md-sys-color-on-primary: #FFFFFF;
-  --md-sys-color-primary-container: #C8E6C9;
-  --md-sys-color-on-primary-container: #1B5E20;
+  --md-sys-color-primary-container: #93BFC7;
+  /* The Blue requested */
+  --md-sys-color-on-primary-container: #001F25;
 
-  --md-sys-color-secondary: #FB8C00;
-  /* Cheerful Orange Accent */
+  --md-sys-color-secondary: #5E8C61;
+  /* Darker version of #ABE7B2 */
   --md-sys-color-on-secondary: #FFFFFF;
-  --md-sys-color-secondary-container: #FFE0B2;
-  --md-sys-color-on-secondary-container: #E65100;
+  --md-sys-color-secondary-container: #ABE7B2;
+  /* The Green requested */
+  --md-sys-color-on-secondary-container: #0C200E;
 
-  --md-sys-color-tertiary: #039BE5;
-  /* Sky Blue */
-  --md-sys-color-on-tertiary: #FFFFFF;
-  --md-sys-color-tertiary-container: #B3E5FC;
-  --md-sys-color-on-tertiary-container: #01579B;
+  --md-sys-color-tertiary: #CBF3BB;
+  /* Light Green requested */
+  --md-sys-color-on-tertiary: #1A1C18;
+  --md-sys-color-tertiary-container: #ECF4E8;
+  /* Lightest Green requested */
+  --md-sys-color-on-tertiary-container: #1A1C18;
 
-  --md-sys-color-error: #D32F2F;
+  --md-sys-color-error: #BA1A1A;
   --md-sys-color-on-error: #FFFFFF;
-  --md-sys-color-error-container: #FFCDD2;
-  --md-sys-color-on-error-container: #B71C1C;
+  --md-sys-color-error-container: #FFDAD6;
+  --md-sys-color-on-error-container: #410002;
 
-  --md-sys-color-background: #FFFDE7;
-  /* Very Light Sunny Yellow/Cream */
+  --md-sys-color-background: #ECF4E8;
+  /* Lightest Green as Background */
   --md-sys-color-on-background: #1A1C18;
-  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-surface: #ECF4E8;
+  /* Match background for seamless look */
   --md-sys-color-on-surface: #1A1C18;
-  --md-sys-color-surface-variant: #F0F4C3;
-  /* Light Lime Surface */
-  --md-sys-color-on-surface-variant: #44483F;
-  --md-sys-color-outline: #827717;
+  --md-sys-color-surface-variant: #CBF3BB;
+  /* Light Green for cards */
+  --md-sys-color-on-surface-variant: #1A1C18;
+  --md-sys-color-outline: #74796D;
 
   /* Typography - Mobile First Scale */
   --md-sys-typescale-display-large: 44px;
@@ -59,7 +63,6 @@
   font-weight: 400;
 
   color-scheme: light;
-  /* Force light mode for cheerfulness */
   color: var(--md-sys-color-on-background);
   background-color: var(--md-sys-color-background);
 
@@ -69,22 +72,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth Scrolling & Snap */
+/* Smooth Scrolling (No Snap) */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  /* Increased offset */
-  scroll-snap-type: y proximity;
-  /* Gentler snap */
 }
 
-/* Snap Sections */
-section,
-.snap-section {
-  scroll-snap-align: start;
-  scroll-margin-top: 64px;
-  /* Ensure navbar doesn't cover content */
+/* Subtle Separator */
+.section-separator {
+  height: 1px;
+  background-color: var(--md-sys-color-outline);
+  opacity: 0.2;
+  margin: 40px 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 /* Desktop Overrides */
 @media (min-width: 768px) {
