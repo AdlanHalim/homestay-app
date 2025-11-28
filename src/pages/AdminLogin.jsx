@@ -28,47 +28,51 @@ const AdminLogin = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            minHeight: '60vh',
+            minHeight: '80vh', /* Increased height for better centering */
             padding: '20px'
         }}>
-            <Card style={{ maxWidth: '400px', width: '100%' }}>
-                <h1 className="text-headline-small" style={{ textAlign: 'center', marginBottom: '24px' }}>Log Masuk Admin</h1>
-                <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <Card style={{ maxWidth: '400px', width: '100%', padding: '24px' }}>
+                <h1 className="text-headline-small" style={{ textAlign: 'center', marginBottom: '32px' }}>Log Masuk Admin</h1>
+                <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     <div>
-                        <label style={{ display: 'block', marginBottom: '8px' }}>Emel</label>
+                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Emel</label>
                         <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             style={{
                                 width: '100%',
-                                padding: '12px',
+                                padding: '16px', /* Larger touch target */
                                 borderRadius: '8px',
                                 border: '1px solid var(--md-sys-color-outline)',
                                 backgroundColor: 'var(--md-sys-color-surface)',
-                                color: 'var(--md-sys-color-on-surface)'
+                                color: 'var(--md-sys-color-on-surface)',
+                                fontSize: '16px',
+                                boxSizing: 'border-box'
                             }}
                             required
                         />
                     </div>
                     <div>
-                        <label style={{ display: 'block', marginBottom: '8px' }}>Kata Laluan</label>
+                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Kata Laluan</label>
                         <input
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             style={{
                                 width: '100%',
-                                padding: '12px',
+                                padding: '16px', /* Larger touch target */
                                 borderRadius: '8px',
                                 border: '1px solid var(--md-sys-color-outline)',
                                 backgroundColor: 'var(--md-sys-color-surface)',
-                                color: 'var(--md-sys-color-on-surface)'
+                                color: 'var(--md-sys-color-on-surface)',
+                                fontSize: '16px',
+                                boxSizing: 'border-box'
                             }}
                             required
                         />
                     </div>
-                    <Button type="submit" variant="primary" style={{ marginTop: '8px' }}>Log Masuk</Button>
+                    <Button type="submit" variant="primary" style={{ marginTop: '16px', padding: '16px' }}>Log Masuk</Button>
                 </form>
             </Card>
         </div>

@@ -94,10 +94,10 @@ const CalendarPage = () => {
                             textAlign: 'center',
                             backgroundColor: isBooked
                                 ? 'var(--md-sys-color-error-container)'
-                                : isCurrentMonth ? 'var(--md-sys-color-surface)' : 'transparent',
+                                : isCurrentMonth ? '#E8F5E9' /* Light Green for available */ : 'transparent',
                             color: isBooked
                                 ? 'var(--md-sys-color-on-error-container)'
-                                : isCurrentMonth ? 'var(--md-sys-color-on-surface)' : 'var(--md-sys-color-outline)',
+                                : isCurrentMonth ? '#1B5E20' /* Dark Green text */ : 'var(--md-sys-color-outline)',
                             borderRadius: '8px',
                             margin: '1px',
                             opacity: isCurrentMonth ? 1 : 0.5,

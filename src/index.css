@@ -66,11 +66,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth Scrolling */
+/* Smooth Scrolling & Snap */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 64px;
   /* Offset for sticky navbar */
+  scroll-snap-type: y mandatory;
+}
+
+/* Snap Sections */
+section,
+.snap-section {
+  scroll-snap-align: start;
+  scroll-margin-top: 64px;
+  /* Ensure navbar doesn't cover content */
 }
 
 /* Desktop Overrides */

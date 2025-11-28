@@ -10,18 +10,19 @@ const Home = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingBottom: '32px' }}>
             {/* Hero Section */}
-            <div id="utama" style={{
+            <div id="utama" className="snap-section" style={{
                 backgroundImage: 'url("https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                minHeight: '60vh',
+                minHeight: '100vh', /* Full height for snap effect */
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'white',
                 textAlign: 'center',
                 position: 'relative',
-                padding: '20px'
+                padding: '20px',
+                boxSizing: 'border-box'
             }}>
                 <div style={{
                     position: 'absolute',
@@ -38,7 +39,7 @@ const Home = () => {
             </div>
 
             {/* Highlights Section */}
-            <div className="container">
+            <div className="container snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '24px' }}>Kenapa Pilih Kami?</h2>
                 <div className="grid-responsive">
                     <Card>
@@ -57,17 +58,17 @@ const Home = () => {
             </div>
 
             {/* Property Details Section */}
-            <div id="info">
+            <div id="info" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <PropertyDetails />
             </div>
 
             {/* Location Section */}
-            <div id="lokasi">
+            <div id="lokasi" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <Location />
             </div>
 
             {/* Calendar Section */}
-            <div id="kekosongan">
+            <div id="kekosongan" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <CalendarPage />
             </div>
         </div>
