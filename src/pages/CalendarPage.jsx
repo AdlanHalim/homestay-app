@@ -94,7 +94,7 @@ const CalendarPage = () => {
                             textAlign: 'center',
                             backgroundColor: isBooked
                                 ? 'var(--md-sys-color-error-container)'
-                                : isCurrentMonth ? '#E8F5E9' /* Light Green for available */ : 'transparent',
+                                : isCurrentMonth ? '#C8E6C9' /* Green 100 - More visible */ : 'transparent',
                             color: isBooked
                                 ? 'var(--md-sys-color-on-error-container)'
                                 : isCurrentMonth ? '#1B5E20' /* Dark Green text */ : 'var(--md-sys-color-outline)',
