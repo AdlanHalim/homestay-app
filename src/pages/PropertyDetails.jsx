@@ -56,6 +56,22 @@ const PropertyDetails = () => {
 
             <div className="section-separator"></div>
 
+            {/* Unit Pricing Section */}
+            <section id="harga">
+                <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Pilihan Unit</h2>
+                <div className="grid-responsive">
+                    {[1, 2, 3, 4].map((num) => (
+                        <Card key={num} variant="surface" style={{ textAlign: 'center' }}>
+                            <h3 className="text-title-large" style={{ marginBottom: '8px', color: 'var(--md-sys-color-primary)' }}>Unit {num}</h3>
+                            <p className="text-display-small" style={{ marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>RM200<span style={{ fontSize: '14px', fontWeight: 'normal' }}>/malam</span></p>
+                            <p className="text-body-medium" style={{ color: 'var(--md-sys-color-outline)' }}>Sesuai untuk 2-4 orang</p>
+                        </Card>
+                    ))}
+                </div>
+            </section>
+
+            <div className="section-separator"></div>
+
             {/* Amenities Section */}
             <section id="kemudahan">
                 <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Kemudahan</h2>

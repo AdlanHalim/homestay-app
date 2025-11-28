@@ -6,7 +6,7 @@ import { FaTrash } from 'react-icons/fa';
 
 const AdminDashboard = () => {
     const [bookings, setBookings] = useState([]);
-    const [newBooking, setNewBooking] = useState({ guest: '', start: '', end: '' });
+    const [newBooking, setNewBooking] = useState({ guest: '', start: '', end: '', unit: 'Unit 1' });
 
     useEffect(() => {
         fetchBookings();
@@ -31,6 +31,7 @@ const AdminDashboard = () => {
                     guest_info: newBooking.guest,
                     start_date: newBooking.start,
                     end_date: newBooking.end,
+                    unit: newBooking.unit,
                     status: 'booked'
                 }
             ]);
@@ -38,7 +39,7 @@ const AdminDashboard = () => {
         if (error) {
             alert('Ralat menambah tempahan: ' + error.message);
         } else {
-            setNewBooking({ guest: '', start: '', end: '' });
+            setNewBooking({ guest: '', start: '', end: '', unit: 'Unit 1' });
             fetchBookings();
         }
     };
@@ -82,6 +83,20 @@ const AdminDashboard = () => {
                             style={{ padding: '16px', borderRadius: '8px', border: '1px solid #ccc', width: '100%', boxSizing: 'border-box', fontSize: '16px' }}
                             required
                         />
+
+                        <div>
+                            <label style={{ display: 'block', marginBottom: '4px', fontSize: '12px' }}>Unit</label>
+                            <select
+                                value={newBooking.unit}
+                                onChange={(e) => setNewBooking({ ...newBooking, unit: e.target.value })}
+                                style={{ padding: '16px', borderRadius: '8px', border: '1px solid #ccc', width: '100%', boxSizing: 'border-box', fontSize: '16px', backgroundColor: 'white' }}
+                            >
+                                <option value="Unit 1">Unit 1</option>
+                                <option value="Unit 2">Unit 2</option>
+                                <option value="Unit 3">Unit 3</option>
+                                <option value="Unit 4">Unit 4</option>
+                            </select>
+                        </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                             <div>
                                 <label style={{ display: 'block', marginBottom: '4px', fontSize: '12px' }}>Mula</label>
@@ -119,6 +134,7 @@ const AdminDashboard = () => {
                                 <Card key={booking.id} variant="variant" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px' }}>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                         <span style={{ fontWeight: 'bold', fontSize: '16px' }}>{booking.guest_info}</span>
+                                        <span style={{ fontSize: '14px', fontWeight: '500', color: 'var(--md-sys-color-primary)' }}>{booking.unit || 'Unit 1'}</span>
                                         <span style={{ fontSize: '14px', color: 'var(--md-sys-color-on-surface-variant)' }}>
                                             {booking.start_date} - {booking.end_date}
                                         </span>

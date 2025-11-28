@@ -9,10 +9,11 @@ import { supabase } from '../supabaseClient';
 const CalendarPage = () => {
     const [currentMonth, setCurrentMonth] = useState(new Date());
     const [bookedDates, setBookedDates] = useState([]);
+    const [selectedUnit, setSelectedUnit] = useState('Unit 1');
 
     useEffect(() => {
         fetchBookings();
-    }, [currentMonth]);
+    }, [currentMonth, selectedUnit]);
 
     const fetchBookings = async () => {
         const start = startOfMonth(currentMonth).toISOString();
@@ -21,7 +22,8 @@ const CalendarPage = () => {
         const { data, error } = await supabase
             .from('bookings')
             .select('start_date, end_date')
-            .eq('status', 'booked');
+            .eq('status', 'booked')
+            .eq('unit', selectedUnit); // Filter by selected unit
 
         if (error) {
             console.error('Error fetching bookings:', error);
@@ -129,6 +131,29 @@ const CalendarPage = () => {
     return (
         <div className="container" style={{ paddingBottom: '32px', paddingTop: '20px' }}>
             <h1 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Kekosongan</h1>
+
+            {/* Unit Selector */}
+            <div style={{ marginBottom: '24px', textAlign: 'center' }}>
+                <label htmlFor="unit-select" style={{ marginRight: '8px', fontWeight: 'bold' }}>Pilih Unit:</label>
+                <select
+                    id="unit-select"
+                    value={selectedUnit}
+                    onChange={(e) => setSelectedUnit(e.target.value)}
+                    style={{
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        border: '1px solid var(--md-sys-color-outline)',
+                        fontSize: '16px',
+                        backgroundColor: 'var(--md-sys-color-surface)'
+                    }}
+                >
+                    <option value="Unit 1">Unit 1</option>
+                    <option value="Unit 2">Unit 2</option>
+                    <option value="Unit 3">Unit 3</option>
+                    <option value="Unit 4">Unit 4</option>
+                </select>
+            </div>
+
             <Card style={{ padding: '12px' }}>
                 {renderHeader()}
                 {renderDays()}
