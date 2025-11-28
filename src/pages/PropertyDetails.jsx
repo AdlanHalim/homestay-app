@@ -30,51 +30,48 @@ const PropertyDetails = () => {
     return (
         <div className="container" style={{ paddingBottom: '32px', paddingTop: '20px' }}>
 
-            {/* Gallery Section */}
-            <section id="galeri">
-                <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Galeri</h2>
-                <Link to="/gallery" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', cursor: 'pointer' }}>
-                        <div style={{ display: 'grid', gap: '8px' }}>
-                            {leftImages.map((src, index) => (
-                                <img key={`left-${index}`} src={src} alt="Gallery" style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '8px' }} />
-                            ))}
-                        </div>
-                        <div style={{ display: 'grid', gap: '8px' }}>
-                            {rightImages.map((src, index) => (
-                                <img key={`right-${index}`} src={src} alt="Gallery" style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '8px' }} />
-                            ))}
-                        </div>
-                    </div>
-                    <div style={{ textAlign: 'center', marginTop: '16px' }}>
-                        <Button variant="secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                            <FaImages /> Lihat Semua Gambar
-                        </Button>
-                    </div>
-                </Link>
-            </section>
-
-            <div className="section-separator"></div>
-
             {/* Unit Pricing Section */}
             <section id="harga">
                 <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Pilihan Unit</h2>
                 <div className="grid-responsive">
                     {[1, 2, 3, 4].map((num) => (
-                        <Card key={num} variant="surface" style={{ textAlign: 'center', padding: '16px', overflow: 'hidden' }}>
-                            <Link to="/gallery" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                                <div style={{ marginBottom: '16px', borderRadius: '8px', overflow: 'hidden', height: '150px' }}>
+                        <Card key={num} variant="surface" style={{ textAlign: 'center', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                            <Link to="/gallery" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                                <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
                                     <img
                                         src={`https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60`}
                                         alt={`Unit ${num}`}
                                         style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
-                                        onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
-                                        onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
+                                        onMouseOver={e => {
+                                            e.currentTarget.style.transform = 'scale(1.05)';
+                                            e.currentTarget.nextSibling.style.opacity = '1';
+                                        }}
+                                        onMouseOut={e => {
+                                            e.currentTarget.style.transform = 'scale(1)';
+                                            e.currentTarget.nextSibling.style.opacity = '0';
+                                        }}
                                     />
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: 0, left: 0, right: 0, bottom: 0,
+                                        backgroundColor: 'rgba(0,0,0,0.3)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        opacity: 0,
+                                        transition: 'opacity 0.3s',
+                                        pointerEvents: 'none'
+                                    }}>
+                                        <span style={{ color: 'white', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(0,0,0,0.6)', padding: '8px 16px', borderRadius: '20px' }}>
+                                            <FaImages /> Lihat Galeri
+                                        </span>
+                                    </div>
                                 </div>
-                                <h3 className="text-title-large" style={{ marginBottom: '8px', color: 'var(--md-sys-color-primary)' }}>Unit {num}</h3>
-                                <p className="text-display-small" style={{ marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>RM200<span style={{ fontSize: '14px', fontWeight: 'normal' }}>/malam</span></p>
-                                <p className="text-body-medium" style={{ color: 'var(--md-sys-color-outline)' }}>Sesuai untuk 2-4 orang</p>
+                                <div style={{ padding: '16px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                                    <h3 className="text-title-large" style={{ marginBottom: '4px', color: 'var(--md-sys-color-primary)' }}>Unit {num}</h3>
+                                    <p className="text-headline-small" style={{ marginBottom: '4px', fontWeight: 'bold' }}>RM200<span style={{ fontSize: '14px', fontWeight: 'normal' }}>/malam</span></p>
+                                    <p className="text-body-small" style={{ color: 'var(--md-sys-color-outline)' }}>Sesuai untuk 2-4 orang</p>
+                                </div>
                             </Link>
                         </Card>
                     ))}
