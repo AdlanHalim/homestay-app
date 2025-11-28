@@ -139,10 +139,23 @@ body {
   gap: 16px;
 }
 
+/* Compact Grid for Mobile (2 columns always) */
+.grid-compact-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
 @media (min-width: 600px) {
   .grid-responsive {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+
+  .grid-compact-mobile {
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 in a row on desktop */
+    gap: 16px;
   }
 }
 

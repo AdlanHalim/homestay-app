@@ -32,12 +32,12 @@ const PropertyDetails = () => {
 
             {/* Unit Pricing Section */}
             <section id="harga">
-                <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Pilihan Unit</h2>
-                <div className="grid-responsive">
+                <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '16px' }}>Pilihan Unit</h2>
+                <div className="grid-compact-mobile">
                     {[1, 2, 3, 4].map((num) => (
                         <Card key={num} variant="surface" style={{ textAlign: 'center', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                             <Link to="/gallery" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                                <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
+                                <div style={{ position: 'relative', height: '120px', overflow: 'hidden' }}>
                                     <img
                                         src={`https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60`}
                                         alt={`Unit ${num}`}
@@ -62,15 +62,15 @@ const PropertyDetails = () => {
                                         transition: 'opacity 0.3s',
                                         pointerEvents: 'none'
                                     }}>
-                                        <span style={{ color: 'white', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(0,0,0,0.6)', padding: '8px 16px', borderRadius: '20px' }}>
-                                            <FaImages /> Lihat Galeri
+                                        <span style={{ color: 'white', fontWeight: 'bold', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px', backgroundColor: 'rgba(0,0,0,0.6)', padding: '4px 8px', borderRadius: '12px' }}>
+                                            <FaImages /> Galeri
                                         </span>
                                     </div>
                                 </div>
-                                <div style={{ padding: '16px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                    <h3 className="text-title-large" style={{ marginBottom: '4px', color: 'var(--md-sys-color-primary)' }}>Unit {num}</h3>
-                                    <p className="text-headline-small" style={{ marginBottom: '4px', fontWeight: 'bold' }}>RM200<span style={{ fontSize: '14px', fontWeight: 'normal' }}>/malam</span></p>
-                                    <p className="text-body-small" style={{ color: 'var(--md-sys-color-outline)' }}>Sesuai untuk 2-4 orang</p>
+                                <div style={{ padding: '8px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                                    <h3 className="text-title-medium" style={{ marginBottom: '2px', color: 'var(--md-sys-color-primary)', fontSize: '16px' }}>Unit {num}</h3>
+                                    <p className="text-title-large" style={{ marginBottom: '2px', fontWeight: 'bold', fontSize: '18px' }}>RM200</p>
+                                    <p className="text-body-small" style={{ color: 'var(--md-sys-color-outline)', fontSize: '10px' }}>2-4 org</p>
                                 </div>
                             </Link>
                         </Card>
