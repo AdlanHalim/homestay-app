@@ -61,10 +61,21 @@ const PropertyDetails = () => {
                 <h2 className="text-headline-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>Pilihan Unit</h2>
                 <div className="grid-responsive">
                     {[1, 2, 3, 4].map((num) => (
-                        <Card key={num} variant="surface" style={{ textAlign: 'center' }}>
-                            <h3 className="text-title-large" style={{ marginBottom: '8px', color: 'var(--md-sys-color-primary)' }}>Unit {num}</h3>
-                            <p className="text-display-small" style={{ marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>RM200<span style={{ fontSize: '14px', fontWeight: 'normal' }}>/malam</span></p>
-                            <p className="text-body-medium" style={{ color: 'var(--md-sys-color-outline)' }}>Sesuai untuk 2-4 orang</p>
+                        <Card key={num} variant="surface" style={{ textAlign: 'center', padding: '16px', overflow: 'hidden' }}>
+                            <Link to="/gallery" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                                <div style={{ marginBottom: '16px', borderRadius: '8px', overflow: 'hidden', height: '150px' }}>
+                                    <img
+                                        src={`https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60`}
+                                        alt={`Unit ${num}`}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
+                                        onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
+                                        onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
+                                    />
+                                </div>
+                                <h3 className="text-title-large" style={{ marginBottom: '8px', color: 'var(--md-sys-color-primary)' }}>Unit {num}</h3>
+                                <p className="text-display-small" style={{ marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>RM200<span style={{ fontSize: '14px', fontWeight: 'normal' }}>/malam</span></p>
+                                <p className="text-body-medium" style={{ color: 'var(--md-sys-color-outline)' }}>Sesuai untuk 2-4 orang</p>
+                            </Link>
                         </Card>
                     ))}
                 </div>

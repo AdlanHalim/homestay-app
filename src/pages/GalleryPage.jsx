@@ -8,24 +8,23 @@ const GalleryPage = () => {
 
     const categories = [
         { id: 'all', label: 'Semua' },
-        { id: 'indoor', label: 'Dalam Rumah' },
-        { id: 'room', label: 'Bilik Tidur' },
-        { id: 'living', label: 'Ruang Tamu' },
-        { id: 'bath', label: 'Bilik Air' },
-        { id: 'parking', label: 'Tempat Letak Kereta' },
+        { id: 'unit1', label: 'Unit 1' },
+        { id: 'unit2', label: 'Unit 2' },
+        { id: 'unit3', label: 'Unit 3' },
+        { id: 'unit4', label: 'Unit 4' },
     ];
 
     const images = [
-        { src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'room', alt: 'Bilik Tidur Utama' },
-        { src: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'living', alt: 'Ruang Tamu Moden' },
-        { src: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'indoor', alt: 'Dapur' },
-        { src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'bath', alt: 'Bilik Air Bersih' },
-        { src: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'parking', alt: 'Parkir Luas' },
-        { src: 'https://images.unsplash.com/photo-1616594039964-40891a909d99?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'room', alt: 'Bilik Tidur 2' },
-        { src: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'living', alt: 'Sudut Santai' },
-        { src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'indoor', alt: 'Ruang Makan' },
-        { src: 'https://images.unsplash.com/photo-1620626012053-1c167f7ebc8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'bath', alt: 'Bilik Air 2' },
-        { src: 'https://images.unsplash.com/photo-1573391205525-37d3814a9854?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'parking', alt: 'Pemandangan Luar' },
+        { src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit1', alt: 'Unit 1 - Bilik Tidur' },
+        { src: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit1', alt: 'Unit 1 - Ruang Tamu' },
+        { src: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit2', alt: 'Unit 2 - Dapur' },
+        { src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit2', alt: 'Unit 2 - Bilik Air' },
+        { src: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit3', alt: 'Unit 3 - Pemandangan' },
+        { src: 'https://images.unsplash.com/photo-1616594039964-40891a909d99?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit3', alt: 'Unit 3 - Bilik Tidur' },
+        { src: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit4', alt: 'Unit 4 - Ruang Santai' },
+        { src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit4', alt: 'Unit 4 - Ruang Makan' },
+        { src: 'https://images.unsplash.com/photo-1620626012053-1c167f7ebc8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit1', alt: 'Unit 1 - Bilik Air' },
+        { src: 'https://images.unsplash.com/photo-1573391205525-37d3814a9854?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', category: 'unit2', alt: 'Unit 2 - Luar' },
     ];
 
     const filteredImages = activeCategory === 'all'
