@@ -58,12 +58,12 @@ const Home = () => {
             </div>
 
             {/* Property Details Section */}
-            <div id="info" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div id="info">
                 <PropertyDetails />
             </div>
 
             {/* Location Section */}
-            <div id="lokasi" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div id="lokasi">
                 <Location />
             </div>
 
