@@ -1,35 +1,37 @@
 :root {
-  /* Material You Inspired Color Palette (Nature/Earth Tones) */
-  --md-sys-color-primary: #3E6837;
-  /* Deep Green */
+  /* Cheerful Nature Palette */
+  --md-sys-color-primary: #43A047;
+  /* Vibrant Green */
   --md-sys-color-on-primary: #FFFFFF;
-  --md-sys-color-primary-container: #BEF0B0;
-  --md-sys-color-on-primary-container: #002204;
+  --md-sys-color-primary-container: #C8E6C9;
+  --md-sys-color-on-primary-container: #1B5E20;
 
-  --md-sys-color-secondary: #53634F;
+  --md-sys-color-secondary: #FB8C00;
+  /* Cheerful Orange Accent */
   --md-sys-color-on-secondary: #FFFFFF;
-  --md-sys-color-secondary-container: #D6E8CE;
-  --md-sys-color-on-secondary-container: #111F0F;
+  --md-sys-color-secondary-container: #FFE0B2;
+  --md-sys-color-on-secondary-container: #E65100;
 
-  --md-sys-color-tertiary: #386568;
-  /* Teal accent */
+  --md-sys-color-tertiary: #039BE5;
+  /* Sky Blue */
   --md-sys-color-on-tertiary: #FFFFFF;
-  --md-sys-color-tertiary-container: #BCEBEB;
-  --md-sys-color-on-tertiary-container: #002021;
+  --md-sys-color-tertiary-container: #B3E5FC;
+  --md-sys-color-on-tertiary-container: #01579B;
 
-  --md-sys-color-error: #BA1A1A;
+  --md-sys-color-error: #D32F2F;
   --md-sys-color-on-error: #FFFFFF;
-  --md-sys-color-error-container: #FFDAD6;
-  --md-sys-color-on-error-container: #410002;
+  --md-sys-color-error-container: #FFCDD2;
+  --md-sys-color-on-error-container: #B71C1C;
 
-  --md-sys-color-background: #FDFDF5;
-  /* Warm off-white */
+  --md-sys-color-background: #FFFDE7;
+  /* Very Light Sunny Yellow/Cream */
   --md-sys-color-on-background: #1A1C18;
-  --md-sys-color-surface: #FDFDF5;
+  --md-sys-color-surface: #FFFFFF;
   --md-sys-color-on-surface: #1A1C18;
-  --md-sys-color-surface-variant: #E0E4D6;
+  --md-sys-color-surface-variant: #F0F4C3;
+  /* Light Lime Surface */
   --md-sys-color-on-surface-variant: #44483F;
-  --md-sys-color-outline: #74796D;
+  --md-sys-color-outline: #827717;
 
   /* Typography - Mobile First Scale */
   --md-sys-typescale-display-large: 44px;
@@ -56,7 +58,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
+  /* Force light mode for cheerfulness */
   color: var(--md-sys-color-on-background);
   background-color: var(--md-sys-color-background);
 
@@ -69,9 +72,10 @@
 /* Smooth Scrolling & Snap */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 64px;
-  /* Offset for sticky navbar */
-  scroll-snap-type: y mandatory;
+  scroll-padding-top: 80px;
+  /* Increased offset */
+  scroll-snap-type: y proximity;
+  /* Gentler snap */
 }
 
 /* Snap Sections */

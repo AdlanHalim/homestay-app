@@ -14,21 +14,17 @@ const PropertyDetails = () => {
         { icon: <FaShower />, name: 'Pemanas Air' },
     ];
 
-    // 10 Images for preview (5 left, 5 right)
+    // 6 Images for preview (3 left, 3 right)
     const leftImages = [
         'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
         'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
         'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-        'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-        'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
     ];
 
     const rightImages = [
         'https://images.unsplash.com/photo-1616594039964-40891a909d99?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
         'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
         'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-        'https://images.unsplash.com/photo-1620626012053-1c167f7ebc8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-        'https://images.unsplash.com/photo-1573391205525-37d3814a9854?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
     ];
 
     return (
